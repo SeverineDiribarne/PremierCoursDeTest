@@ -3,7 +3,7 @@ package com.openclassrooms.testing;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Calculator1 {
+public class Calculatrice1 {
 
 	public int add(int a, int b) {
 		return a + b;
@@ -12,12 +12,11 @@ public class Calculator1 {
 	public int multiply(int a, int b) {
 		return a * b;
 	}
-	
+
 	public void longCalculation() {
 		try {
 			Thread.sleep(500);
-		}
-		catch(InterruptedException e) {
+		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
@@ -25,10 +24,10 @@ public class Calculator1 {
 	public Set<Integer> digitsSet(int number) {
 		final Set<Integer> integers = new HashSet<>();
 		final String numberString = String.valueOf(number);
-		
-		for(int i =0; i< numberString.length(); i++) {
-			if(numberString.charAt(i) != '-') {
-			integers.add(Integer.parseInt(numberString, i, i + 1, 10));
+
+		for (int i = 0; i < numberString.length(); i++) {
+			if (numberString.charAt(i) != '-') {
+				integers.add(Integer.parseInt(numberString, i, i + 1, 10));
 			}
 		}
 		return integers;
